@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Empress's Second Crown - Story Guide</title>
+  <meta name="description" content="A story guide for The Empress's Second Crown, an imperial fantasy romance featuring Calliope Chen and Tyler James Park." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --navy: #0b1020;
+      --navy-2: #12182b;
+      --navy-3: #1a2238;
+      --navy-4: #24304a;
+      --ivory: #f6f1e6;
+      --ivory-soft: #e8e0d0;
+      --ivory-dim: #c9c0ae;
+      --gold: #c9a44a;
+      --gold-bright: #e8d39a;
+      --gold-deep: #8d6b1f;
+      --silver: #b8c2ce;
+      --silver-bright: #e6edf5;
+      --rose: #c9a8ad;
+      --line: rgba(232, 211, 154, 0.22);
+      --line-silver: rgba(184, 194, 206, 0.28);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+      --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --nav-h: 4.25rem;
+      --radius: 1rem;
+      --max: 70rem;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(201, 164, 74, 0.12), transparent 50%),
+        radial-gradient(ellipse 70% 45% at 100% 0%, rgba(184, 194, 206, 0.1), transparent 46%),
+        var(--navy);
+      color: var(--ivory);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+    img, svg { max-width: 100%; }
+    a { color: var(--gold-bright); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+    a:hover { color: #fff6d8; }
+    .skip {
+      position: absolute; left: 1rem; top: -4rem;
+      background: var(--gold); color: var(--navy);
+      padding: 0.6rem 1rem; z-index: 200; font-weight: 600;
+      border-radius: 0 0 0.4rem 0.4rem;
+    }
+    .skip:focus { top: 0; }
+    .nav {
+      position: sticky; top: 0; z-index: 100; height: var(--nav-h);
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0 1.1rem;
+      background: rgba(11, 16, 32, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+      overflow: visible;
+    }
+    .nav.is-open {
+      background: #0b1020;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 0.65rem;
+      color: inherit; text-decoration: none; flex-shrink: 0;
+    }
+    .nav-brand:hover { color: var(--gold-bright); }
+    .nav-brand-text {
+      font-family: var(--serif); font-weight: 600;
+      font-size: 1.05rem; letter-spacing: 0.04em;
+      line-height: 1.15; white-space: nowrap;
+    }
+    .nav-brand-text small {
+      display: block; font-family: var(--sans);
+      font-size: 0.62rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--ivory-dim); font-weight: 500;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 0.15rem;
+      margin-left: auto; list-style: none; padding: 0;
+    }
+    .nav-links a {
+      color: var(--ivory-soft); text-decoration: none;
+      font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600;
+      padding: 0.4rem 0.45rem; border-radius: 0.3rem; white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible, .nav-links a.is-active {
+      color: var(--gold-bright); background: rgba(201, 164, 74, 0.1);
+    }
+    .nav-tools { display: flex; align-items: center; gap: 0.45rem; flex-shrink: 1; min-width: 0; margin-left: auto; }
+    .search-wrap { position: relative; flex: 1 1 auto; min-width: 0; width: 13.5rem; max-width: 16rem; }
+    .search-wrap input {
+      width: 100%; background: var(--navy-3);
+      border: 1px solid var(--line); color: var(--ivory);
+      border-radius: 999px; padding: 0.42rem 0.85rem 0.42rem 2.15rem;
+      font: inherit; font-size: 0.88rem;
+    }
+    .search-wrap input::placeholder { color: var(--ivory-dim); }
+    .search-wrap input:focus {
+      outline: 2px solid var(--gold); outline-offset: 1px; border-color: var(--gold);
+    }
+    .search-icon {
+      position: absolute; left: 0.7rem; top: 50%;
+      transform: translateY(-50%); width: 0.95rem; height: 0.95rem;
+      pointer-events: none; color: var(--ivory-dim);
+    }
+    .search-results {
+      display: none; position: absolute; right: 0;
+      top: calc(100% + 0.45rem); width: min(22rem, 80vw);
+      max-height: 22rem; overflow: auto;
+      background: var(--navy-2); border: 1px solid var(--line);
+      border-radius: 0.75rem; box-shadow: var(--shadow);
+      padding: 0.4rem; z-index: 120;
+    }
+    .search-results.is-open { display: block; }
+    .search-results p.muted { margin: 0.6rem; color: var(--ivory-dim); font-size: 0.9rem; }
+    .search-results a, .search-results button {
+      display: block; width: 100%; text-align: left;
+      background: none; border: 0; color: var(--ivory);
+      font: inherit; padding: 0.55rem 0.7rem; border-radius: 0.45rem;
+      cursor: pointer; text-decoration: none;
+    }
+    .search-results a:hover, .search-results button:hover,
+    .search-results a:focus, .search-results button:focus {
+      background: var(--navy-3); color: var(--gold-bright);
+    }
+    .search-results .hit-kicker {
+      display: block; font-size: 0.68rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.1rem;
+    }
+    .menu-btn {
+      display: none; background: transparent; border: 1px solid var(--line);
+      color: var(--ivory); width: 2.6rem; height: 2.6rem; border-radius: 0.45rem;
+      cursor: pointer; align-items: center; justify-content: center;
+    }
+    .menu-btn:focus-visible { outline: 2px solid var(--gold); }
+    .menu-btn svg { width: 1.25rem; height: 1.25rem; }
+    @media (max-width: 1100px) {
+      .menu-btn { display: inline-flex; }
+      .nav-links {
+        display: none; position: absolute; top: var(--nav-h); left: 0; right: 0;
+        flex-direction: column; align-items: stretch;
+        background: #0b1020; border-bottom: 1px solid var(--line);
+        padding: 0.6rem 0.8rem 1rem; margin: 0; gap: 0.15rem;
+        z-index: 110; box-shadow: 0 16px 30px rgba(0,0,0,0.45);
+      }
+      .nav.is-open .nav-links { display: flex; }
+      .nav-links a { padding: 0.7rem 0.8rem; font-size: 0.9rem; }
+      .search-wrap { width: auto; max-width: none; }
+    }
+    @media (max-width: 560px) {
+      .nav-brand-text { display: none; }
+    }
+    main { overflow-x: hidden; }
+    section { scroll-margin-top: calc(var(--nav-h) + 1.25rem); padding: 4.5rem 1.4rem 1rem; }
+    .wrap { width: min(var(--max), 100%); margin: 0 auto; }
+    .narrow { width: min(46rem, 100%); margin-left: auto; margin-right: auto; }
+    .kicker {
+      font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--gold); font-weight: 600; margin: 0 0 0.6rem;
+    }
+    h1, h2, h3, h4 {
+      font-family: var(--serif); font-weight: 600; letter-spacing: 0.02em;
+      line-height: 1.15; color: var(--ivory);
+    }
+    h1 { font-size: clamp(2.6rem, 6.4vw, 5.1rem); margin: 0 0 0.8rem; font-weight: 500; }
+    h2 { font-size: clamp(2rem, 3.4vw, 2.85rem); margin: 0 0 0.4rem; }
+    h3 { font-size: 1.55rem; margin: 0 0 0.25rem; }
+    h4 { font-size: 1.2rem; margin: 0 0 0.3rem; }
+    p { margin: 0 0 1rem; }
+    .lede { font-family: var(--serif); font-size: 1.35rem; font-style: italic; color: var(--ivory-soft); line-height: 1.55; }
+    .muted { color: var(--ivory-dim); }
+    .section-intro { max-width: 42rem; margin-bottom: 2rem; color: var(--ivory-soft); }
+    .ornament { display: flex; align-items: center; justify-content: center; gap: 0.85rem; margin: 1.4rem 0 2rem; color: var(--gold); }
+    .ornament .rule { height: 1px; width: 4.5rem; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.7; }
+    .proposal, .badge {
+      display: inline-flex; align-items: center; vertical-align: middle;
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--navy);
+      background: var(--gold-bright); border-radius: 999px;
+      padding: 0.12rem 0.48rem; margin-left: 0.4rem; line-height: 1.3;
+      position: relative; top: -0.12em;
+    }
+    .note {
+      font-size: 0.92rem; color: var(--ivory-dim);
+      border-left: 2px solid var(--gold); padding: 0.15rem 0 0.15rem 0.9rem; margin: 0 0 1.5rem;
+    }
+    #home { padding-top: 3.5rem; padding-bottom: 3rem; position: relative; }
+    .hero-mark { display: flex; justify-content: center; margin-bottom: 1.4rem; }
+    .title-block { text-align: center; }
+    .title-block h1 span {
+      display: block; font-size: 0.38em; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--gold-bright); font-weight: 600; margin-bottom: 0.45rem;
+    }
+    .tagline {
+      font-family: var(--serif); font-style: italic;
+      font-size: clamp(1.2rem, 2.2vw, 1.55rem); color: var(--gold-bright);
+      max-width: 40rem; margin: 0 auto 2.2rem; line-height: 1.45;
+    }
+    .theme-box, .callout {
+      background: linear-gradient(180deg, rgba(26, 34, 56, 0.9), rgba(18, 24, 43, 0.9));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.35rem 1.5rem 1.1rem; margin: 0 0 1.6rem; box-shadow: var(--shadow);
+    }
+    .theme-box .kicker { margin-bottom: 0.4rem; }
+    .theme-box p:last-child { margin-bottom: 0; }
+    .premise h3 { text-align: center; font-weight: 500; margin: 2.2rem 0 1.2rem; color: var(--gold-bright); }
+    .premise p { color: var(--ivory-soft); }
+    .cast-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.1rem;
+    }
+    .char-card, .support-card {
+      background: linear-gradient(180deg, rgba(26, 34, 56, 0.95), rgba(15, 20, 36, 0.95));
+      border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s, opacity 0.2s;
+    }
+    .char-card:hover, .support-card:hover { border-color: rgba(232, 211, 154, 0.5); }
+    .char-card.is-hidden, .support-card.is-hidden, .timeline-item.is-hidden,
+    .rule-card.is-hidden, .empire-col.is-hidden, .spoiler.is-hidden,
+    .q-item.is-hidden, .style-card.is-hidden, .rel-item.is-hidden, .detail-box.is-hidden {
+      display: none;
+    }
+    .char-toggle, .support-card {
+      width: 100%; background: none; border: 0; color: inherit;
+      font: inherit; text-align: left; cursor: pointer; padding: 1.15rem 1.15rem 1rem;
+    }
+    .char-toggle { display: flex; gap: 0.9rem; align-items: flex-start; }
+    .char-toggle:focus-visible, .support-card:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+    .mono {
+      flex-shrink: 0; width: 3.1rem; height: 3.1rem; border-radius: 50%;
+      display: grid; place-items: center; font-family: var(--serif);
+      font-size: 1.35rem; font-weight: 600; border: 1px solid var(--gold);
+      background: radial-gradient(circle at 35% 30%, rgba(232, 211, 154, 0.25), transparent 60%), var(--navy-3);
+      color: var(--gold-bright);
+    }
+    .char-card[data-court="eryndor"] .mono, .support-card[data-court="eryndor"] .mono {
+      border-color: var(--silver); color: var(--silver-bright);
+      background: radial-gradient(circle at 35% 30%, rgba(184, 194, 206, 0.22), transparent 60%), var(--navy-3);
+    }
+    .char-card[data-court="mochi"] .mono { border-color: var(--rose); color: #f0dce0; }
+    .char-role { margin: 0; font-size: 0.86rem; color: var(--ivory-dim); line-height: 1.4; }
+    .char-hint { margin: 0.35rem 0 0; font-size: 0.92rem; color: var(--ivory-soft); }
+    .expand-hint {
+      margin: 0.55rem 0 0; font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); font-weight: 600;
+    }
+    .char-body { display: none; padding: 0 1.15rem 1.2rem; border-top: 1px solid var(--line); }
+    .char-card.is-open .char-body { display: block; padding-top: 1rem; }
+    .char-card.is-open .expand-hint::before { content: "Close profile"; }
+    .char-card:not(.is-open) .expand-hint::before { content: "Open full profile"; }
+    .facts { display: grid; gap: 0.7rem; margin: 0 0 1rem; }
+    .facts dt {
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; margin: 0;
+    }
+    .facts dd { margin: 0.15rem 0 0; color: var(--ivory-soft); }
+    .arc {
+      background: rgba(201, 164, 74, 0.07); border-radius: 0.6rem;
+      padding: 0.85rem 1rem; margin: 0; color: var(--ivory-soft);
+    }
+    .quote {
+      margin: 1rem 0 0; padding: 0.9rem 1rem 0.9rem 1.1rem;
+      border-left: 2px solid var(--silver); font-family: var(--serif);
+      font-style: italic; font-size: 1.2rem; color: var(--silver-bright);
+    }
+    .quote cite {
+      display: block; margin-top: 0.4rem; font-family: var(--sans);
+      font-style: normal; font-size: 0.78rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ivory-dim);
+    }
+    .subhead { margin: 2.8rem 0 1rem; display: flex; align-items: baseline; gap: 0.7rem; flex-wrap: wrap; }
+    .subhead h3 { margin: 0; }
+    .support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr)); gap: 0.9rem; }
+    .support-card { padding: 1.1rem 1.15rem 1rem; }
+    .support-card .meta {
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; margin: 0 0 0.35rem;
+    }
+    .support-card[data-court="eryndor"] .meta { color: var(--silver); }
+    .support-card h4 { margin: 0 0 0.3rem; font-size: 1.25rem; }
+    .support-card p { margin: 0; font-size: 0.95rem; color: var(--ivory-soft); }
+    .search-banner {
+      display: none; margin: 0 0 1.2rem; padding: 0.7rem 1rem;
+      background: rgba(201, 164, 74, 0.1); border: 1px solid var(--line);
+      border-radius: 0.6rem; color: var(--gold-bright);
+    }
+    .search-banner.is-visible { display: flex; justify-content: space-between; gap: 1rem; align-items: center; flex-wrap: wrap; }
+    .search-banner button {
+      background: none; border: 1px solid var(--gold); color: var(--gold-bright);
+      border-radius: 999px; font: inherit; font-size: 0.85rem; padding: 0.25rem 0.8rem; cursor: pointer;
+    }
+
+    .rel-wrap {
+      background: linear-gradient(180deg, rgba(26, 34, 56, 0.9), rgba(15, 20, 36, 0.95));
+      border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1rem 0.6rem 0.6rem; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    }
+    .rel-svg { width: 100%; min-width: 46rem; height: auto; display: block; }
+    .rel-legend {
+      display: flex; flex-wrap: wrap; gap: 1rem 1.6rem; justify-content: center;
+      margin: 1rem 0 0; font-size: 0.85rem; color: var(--ivory-dim);
+    }
+    .rel-legend span { display: inline-flex; align-items: center; gap: 0.45rem; }
+    .swatch-line { width: 1.6rem; height: 0; border-top: 2px solid var(--gold-bright); }
+    .swatch-line.dash { border-top-style: dashed; border-top-color: var(--rose); }
+    .rel-list {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 0.7rem; margin-top: 1.4rem;
+    }
+    .rel-item {
+      border: 1px solid var(--line); border-radius: 0.7rem;
+      padding: 0.75rem 0.9rem; background: var(--navy-2); font-size: 0.95rem;
+    }
+    .rel-item strong { color: var(--gold-bright); font-weight: 600; }
+    .empires { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+    @media (max-width: 740px) { .empires { grid-template-columns: 1fr; } }
+    .empire-col {
+      border-radius: var(--radius); padding: 1.4rem 1.3rem 1.1rem;
+      border: 1px solid var(--line); background: var(--navy-2);
+    }
+    .empire-col.aurelian {
+      border-color: rgba(201, 164, 74, 0.4);
+      background: radial-gradient(circle at 90% 0%, rgba(201, 164, 74, 0.14), transparent 45%), var(--navy-2);
+    }
+    .empire-col.eryndor {
+      border-color: rgba(184, 194, 206, 0.4);
+      background: radial-gradient(circle at 90% 0%, rgba(184, 194, 206, 0.14), transparent 45%), var(--navy-2);
+    }
+    .empire-col h3 { display: flex; align-items: center; gap: 0.55rem; }
+    .empire-col dl { margin: 1rem 0 0; }
+    .empire-col dt {
+      font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; margin: 0.85rem 0 0.15rem;
+    }
+    .empire-col.eryndor dt { color: var(--silver); }
+    .empire-col dd { margin: 0; color: var(--ivory-soft); }
+    .rules { display: grid; gap: 0.8rem; }
+    .rule-card {
+      display: grid; grid-template-columns: auto 1fr; gap: 0.95rem; align-items: start;
+      background: var(--navy-2); border: 1px solid var(--line-silver);
+      border-radius: 0.85rem; padding: 1rem 1.15rem;
+    }
+    .rule-num { font-family: var(--serif); font-size: 1.4rem; color: var(--silver-bright); width: 1.8rem; text-align: center; line-height: 1.2; }
+    .rule-card p { margin: 0; color: var(--ivory-soft); }
+    .timeline { position: relative; padding-left: 0; }
+    .timeline::before {
+      content: ""; position: absolute; left: 1.05rem; top: 0.4rem; bottom: 0.4rem;
+      width: 1px; background: linear-gradient(180deg, var(--gold), var(--silver)); opacity: 0.55;
+    }
+    .timeline-item { position: relative; padding: 0 0 1.5rem 3.2rem; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: 0.62rem; top: 0.55rem;
+      width: 0.9rem; height: 0.9rem; border-radius: 50%;
+      background: var(--navy); border: 2px solid var(--gold-bright);
+      box-shadow: 0 0 0 4px rgba(11, 16, 32, 1);
+    }
+    .timeline-item:nth-child(even)::before { border-color: var(--silver); }
+    .part-card {
+      background: var(--navy-2); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.15rem 1.25rem 1rem;
+    }
+    .part-range {
+      font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; margin: 0 0 0.25rem;
+    }
+    .part-card h3 { margin-bottom: 0.6rem; }
+    .part-card p:last-child { margin-bottom: 0; }
+    .dev-table-wrap { overflow-x: auto; margin-top: 2rem; border: 1px solid var(--line); border-radius: var(--radius); }
+    table { width: 100%; border-collapse: collapse; min-width: 36rem; font-size: 0.98rem; }
+    th, td { text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th {
+      font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 700; background: var(--navy-3);
+    }
+    tbody tr:last-child td { border-bottom: 0; }
+    tbody tr:nth-child(even) { background: rgba(255, 255, 255, 0.02); }
+    .spoiler {
+      background: var(--navy-2); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+    }
+    .spoiler h3 { margin-bottom: 0.7rem; }
+    .spoiler-body {
+      filter: blur(7px); user-select: none; pointer-events: none;
+      transition: filter 0.35s ease; color: var(--ivory-soft);
+    }
+    .spoiler.is-open .spoiler-body { filter: none; user-select: text; pointer-events: auto; }
+    .spoiler-btn {
+      display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.85rem;
+      background: transparent; border: 1px solid var(--gold); color: var(--gold-bright);
+      font: inherit; font-size: 0.85rem; letter-spacing: 0.06em;
+      text-transform: uppercase; font-weight: 600; padding: 0.4rem 0.85rem;
+      border-radius: 999px; cursor: pointer;
+    }
+    .spoiler-btn:hover, .spoiler-btn:focus-visible { background: rgba(201, 164, 74, 0.12); outline: none; }
+    .style-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr)); gap: 0.9rem; }
+    .style-card {
+      background: var(--navy-2); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 1.15rem 1.2rem 1rem;
+    }
+    .style-card h3 { color: var(--gold-bright); font-size: 1.35rem; }
+    .style-card p:last-child { margin-bottom: 0; color: var(--ivory-soft); }
+    .detail-box {
+      margin-top: 1.4rem; border: 1px solid rgba(201, 164, 74, 0.45);
+      border-radius: var(--radius); padding: 1.2rem 1.3rem 1rem;
+      background: linear-gradient(180deg, rgba(201, 164, 74, 0.08), rgba(18, 24, 43, 0.4));
+    }
+    .q-list { display: grid; gap: 0.75rem; }
+    .q-item {
+      background: var(--navy-2); border: 1px solid var(--line);
+      border-radius: 0.85rem; padding: 1rem 1.15rem;
+      display: grid; grid-template-columns: auto 1fr; gap: 0.85rem; align-items: start;
+    }
+    .q-num { font-family: var(--serif); font-size: 1.35rem; color: var(--gold-bright); line-height: 1.2; }
+    .q-item p { margin: 0; color: var(--ivory-soft); }
+    footer {
+      margin-top: 3rem; padding: 2.2rem 1.4rem 3rem;
+      border-top: 1px solid var(--line); text-align: center;
+      color: var(--ivory-dim); font-size: 0.92rem;
+    }
+    footer p { margin: 0.3rem 0; }
+    .legend-bar {
+      display: flex; flex-wrap: wrap; gap: 0.45rem 1.2rem; align-items: center;
+      margin: 0 auto 2rem; justify-content: center; font-size: 0.9rem; color: var(--ivory-dim);
+      max-width: 42rem; text-align: center;
+    }
+    .legend-bar .dot { opacity: 0.7; }
+    @media (max-width: 640px) {
+      .legend-bar { flex-direction: column; gap: 0.55rem; }
+      .legend-bar .dot { display: none; }
+    }
+    .rel-hint {
+      display: none; text-align: center; font-size: 0.85rem; color: var(--ivory-dim);
+      margin: 0 0 0.6rem;
+    }
+    @media (max-width: 800px) {
+      .rel-hint { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip" href="#home">Skip to content</a>
+
+  <nav class="nav" id="nav" aria-label="Story guide">
+    <a class="nav-brand" href="#home">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="24" cy="32" r="12" fill="none" stroke="#e8d39a" stroke-width="1.6"/>
+        <g fill="#e8d39a">
+          <circle cx="24" cy="17" r="1.2"/>
+          <circle cx="24" cy="47" r="1.2"/>
+          <circle cx="9" cy="32" r="1.2"/>
+          <circle cx="39" cy="32" r="1.2"/>
+        </g>
+        <path d="M50 20c-8 2.2-13 10-13 18.2 0 8 5 15.4 13 17.8-6.4 1.2-13.6-2.6-16.8-9.4-3.4-7-1.6-15.6 4.4-20.4C42.4 22 46.4 20.2 50 20z" fill="none" stroke="#c5ced8" stroke-width="1.6"/>
+      </svg>
+      <span class="nav-brand-text">The Empress’s Second Crown<small>Story guide</small></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#characters">Characters</a></li>
+      <li><a href="#relationships">Relationships</a></li>
+      <li><a href="#empires">Empires</a></li>
+      <li><a href="#moonborn">Moonborn</a></li>
+      <li><a href="#plot">Plot</a></li>
+      <li><a href="#mysteries">Mysteries</a></li>
+      <li><a href="#style">Style</a></li>
+      <li><a href="#questions">Questions</a></li>
+    </ul>
+    <div class="nav-tools">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M16 16.5L20.5 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <input id="search" type="search" placeholder="Search…" autocomplete="off" aria-label="Search characters and terms" aria-controls="search-results" />
+        <div class="search-results" id="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home">
+      <div class="wrap">
+        <div class="title-block">
+          <div class="hero-mark" aria-hidden="true">
+            <svg width="180" height="72" viewBox="0 0 180 72">
+              <line x1="8" y1="36" x2="48" y2="36" stroke="#c9a44a" stroke-width="1" opacity="0.7"/>
+              <circle cx="70" cy="36" r="16" fill="none" stroke="#e8d39a" stroke-width="1.4"/>
+              <g fill="#e8d39a">
+                <circle cx="70" cy="16" r="1.4"/>
+                <circle cx="70" cy="56" r="1.4"/>
+                <circle cx="50" cy="36" r="1.4"/>
+                <circle cx="90" cy="36" r="1.4"/>
+              </g>
+              <path d="M124 20.5c-8.2 3.6-13.2 11.6-13.2 20.5S115.8 58 124 61.6c-9.2-1-16.8-9-16.8-20.6S114.8 21.4 124 20.5z" fill="none" stroke="#c5ced8" stroke-width="1.4"/>
+              <line x1="132" y1="36" x2="172" y2="36" stroke="#c5ced8" stroke-width="1" opacity="0.7"/>
+            </svg>
+          </div>
+          <p class="kicker">An imperial fantasy romance</p>
+          <h1><span>A story guide to</span>The Empress’s Second Crown</h1>
+          <p class="tagline">Her first husband gave another woman his heart. Her second husband gave her a crown, a kingdom, and a rather suspicious little wolf.</p>
+        </div>
+        <div class="legend-bar">
+          <span>Featuring Calliope Chen and Tyler James Park</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span><span class="proposal" style="margin-left:0">Proposal</span> marks invented suggestions, easy to change</span>
+        </div>
+        <div class="theme-box narrow">
+          <p class="kicker">Theme</p>
+          <p>A woman raised to be chosen learns to do the choosing. Lucien takes Callie for granted, Tyler watches her too closely, and both men have to learn that she is not a prize or a pawn but a ruler.</p>
+        </div>
+        <div class="premise narrow">
+          <h3>The complete story premise</h3>
+          <p>Calliope Chen was raised to become the perfect empress.</p>
+          <p>Born into the prestigious House Chen, she was betrothed to Crown Prince Lucien de Valmont at a young age. They grew up together, studied together, and eventually married when Lucien ascended the Aurelian throne.</p>
+          <p>For eight years, Callie has faithfully served as empress, overseeing diplomatic relations, managing the imperial household, and protecting the interests of the people.</p>
+          <p>But her marriage has become little more than a political arrangement.</p>
+          <p>Everything changes when Lucien brings Evelina Rosier, a beautiful woman from a disgraced noble family, into the palace as his mistress.</p>
+          <p>Evelina initially appears gentle and harmless. She frequently seeks Callie’s approval and insists that she has no intention of challenging the empress’s authority.</p>
+          <p>Yet as Lucien becomes increasingly devoted to her, Evelina begins demanding privileges traditionally reserved for the empress.</p>
+          <p>Lucien dismisses Callie’s objections as jealousy.</p>
+          <p>The imperial court begins dividing into factions, and Callie finds herself increasingly isolated within the palace she has spent her life protecting.</p>
+          <p>Meanwhile, Emperor Tyler James Park of Eryndor arrives in Aurelian territory for diplomatic negotiations.</p>
+          <p>At thirty-one, Tyler is one of the continent’s most influential sovereigns. He is charming, playful, and seemingly carefree, but beneath his pleasant demeanour is a calculating political strategist.</p>
+          <p>Tyler has another secret.</p>
+          <p>He belongs to the ancient Moonborn dynasty, a royal bloodline capable of transforming into wolves.</p>
+          <p>During a particularly tedious diplomatic banquet, Tyler slips away from the festivities and transforms into a small, fluffy black wolf to explore the imperial gardens unnoticed.</p>
+          <p>There, he encounters Callie.</p>
+          <p>Unaware that the adorable creature is actually a foreign emperor, she befriends him and affectionately names him Mochi.</p>
+          <p>Tyler is initially horrified by the name.</p>
+          <p>Unfortunately, he enjoys her company far too much to object.</p>
+          <p>What begins as an amusing diversion becomes something far more complicated.</p>
+          <p>As Mochi, Tyler witnesses the loneliness Callie conceals behind her imperial composure. As Emperor Park, he comes to admire her intelligence, kindness, and extraordinary political ability.</p>
+          <p>Their friendship gradually develops through diplomatic encounters, private conversations, and the occasional appearance of a suspiciously affectionate wolf.</p>
+          <p>But Tyler is not entirely innocent.</p>
+          <p>He has his own political reasons for cultivating an alliance with Callie, and his growing attachment threatens to complicate plans he has spent years preparing.</p>
+          <p>When Evelina announces that she is carrying Lucien’s child, the Aurelian court erupts into a succession crisis.</p>
+          <p>Lucien eventually decides to divorce Callie and elevate Evelina to empress.</p>
+          <p>He expects Callie to accept the decision quietly and remain within his reach.</p>
+          <p>Instead, Callie accepts the divorce and announces her intention to remarry.</p>
+          <p>Her chosen husband is none other than Emperor Tyler James Park.</p>
+          <p>The decision shocks the continent.</p>
+          <p>For the first time in generations, a former empress of Aurelian will become the reigning empress of a rival nation.</p>
+          <p>But Callie’s arrival in Eryndor is only the beginning.</p>
+          <p>She must navigate an unfamiliar imperial court. The marriage begins as a political partnership, but their friendship deepens.</p>
+          <p>Callie also discovers that Mochi has somehow followed her north.</p>
+          <p>Eventually, she learns the truth about the Moonborn dynasty and Tyler’s secret identity.</p>
+          <p>The imperial drama remains the backbone of the story, while Tyler’s secret wolf identity adds humour, tenderness, and a complication that eventually tests Callie’s trust.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="characters">
+      <div class="wrap">
+        <p class="kicker">The company she keeps</p>
+        <h2>Characters</h2>
+        <p class="section-intro">The main four, plus Mochi — who is Tyler, and also very much his own problem. Click a card for the full profile. Supporting names and most ages and looks are proposals.</p>
+        <div class="search-banner" id="filter-banner" hidden>
+          <span id="filter-label"></span>
+          <button type="button" id="clear-search">Clear search</button>
+        </div>
+        <div class="cast-grid" id="main-cast">
+          <article class="char-card" data-court="aurelian" data-terms="calliope chen callie empress house chen aurelian moonborn ancestry proposal dutiful sovereign" id="char-callie">
+            <button class="char-toggle" type="button" aria-expanded="false" aria-controls="profile-callie">
+              <span class="mono" aria-hidden="true">C</span>
+              <span>
+                <h3>Calliope Chen</h3>
+                <p class="char-role">Empress of Aurelian, later Empress of Eryndor</p>
+                <p class="char-hint">A dutiful empress who has spent eight years protecting a court that is learning to look past her.</p>
+                <p class="expand-hint"></p>
+              </span>
+            </button>
+            <div class="char-body" id="profile-callie">
+              <dl class="facts">
+                <div><dt>Age <span class="proposal">Proposal</span></dt><dd>26 at the start; married to Lucien at 18. (Eight years as empress is from the premise.)</dd></div>
+                <div><dt>Title</dt><dd>Empress of Aurelian, later Empress of Eryndor</dd></div>
+                <div><dt>House</dt><dd>House Chen, the oldest and most respected noble house in Aurelian</dd></div>
+                <div><dt>Look <span class="proposal">Proposal</span></dt><dd>Black hair worn in formal braided coils, dark eyes, a composed face that rarely shows what she feels; favours deep blue and silver in court</dd></div>
+                <div><dt>Strengths</dt><dd>Reads people instantly, remembers every name and grudge at court, a gifted negotiator, quietly funny once she trusts you</dd></div>
+                <div><dt>Flaws</dt><dd>Swallows her own needs until they become resentment, struggles to accept help, mistakes endurance for strength</dd></div>
+                <div><dt>Wants</dt><dd>To be valued for who she is, not for the role she fills</dd></div>
+                <div><dt>Fears</dt><dd>That without the crown she is nothing</dd></div>
+                <div><dt>Secret comfort</dt><dd>Talks to Mochi in the gardens about things she has never said aloud to anyone</dd></div>
+              </dl>
+              <p class="arc"><strong>Arc.</strong> From a dutiful empress who places obligation above herself to a confident sovereign who governs as Tyler’s equal. Her turning point is realising that leaving Lucien is not a defeat but her first truly free decision.</p>
+            </div>
+          </article>
+          <article class="char-card" data-court="eryndor" data-terms="tyler james park emperor eryndor moonborn dynasty wolf strategist mochi" id="char-tyler">
+            <button class="char-toggle" type="button" aria-expanded="false" aria-controls="profile-tyler">
+              <span class="mono" aria-hidden="true">T</span>
+              <span>
+                <h3>Tyler James Park</h3>
+                <p class="char-role">Emperor of Eryndor, head of the Moonborn dynasty</p>
+                <p class="char-hint">Charming, playful, and seemingly carefree — a calculating strategist with a second, much fluffier life.</p>
+                <p class="expand-hint"></p>
+              </span>
+            </button>
+            <div class="char-body" id="profile-tyler">
+              <dl class="facts">
+                <div><dt>Age</dt><dd>31</dd></div>
+                <div><dt>Title</dt><dd>Emperor of Eryndor, head of the Moonborn dynasty</dd></div>
+                <div><dt>Look <span class="proposal">Proposal</span></dt><dd>Tall, dark tousled hair he refuses to keep tidy, warm brown eyes that turn faintly silver in moonlight, an easy grin that hides how closely he is watching</dd></div>
+                <div><dt>Wolf form</dt><dd>Mochi: a small, very fluffy black wolf, deeply offended by the name and secretly delighted by belly rubs</dd></div>
+                <div><dt>Strengths</dt><dd>Charming, quick, a patient long-game strategist, genuinely kind to people beneath him</dd></div>
+                <div><dt>Flaws</dt><dd>Treats people as pieces on a board, believes he can manage any consequence, hides behind jokes</dd></div>
+                <div><dt>Wants</dt><dd>A secure throne and an empire that survives the Moonborn secret; later, Callie’s trust</dd></div>
+                <div><dt>Fears</dt><dd>Being known completely and found wanting</dd></div>
+              </dl>
+              <p class="arc"><strong>Arc.</strong> From a charming strategist who conceals his true intentions to a ruler capable of honesty and genuine partnership. The Mochi reveal is where he finally pays for his cleverness.</p>
+            </div>
+          </article>
+          <article class="char-card" data-court="mochi" data-terms="mochi wolf fluffy black dessert gardens pastry belly rubs identity reveal" id="char-mochi">
+            <button class="char-toggle" type="button" aria-expanded="false" aria-controls="profile-mochi">
+              <span class="mono" aria-hidden="true">M</span>
+              <span>
+                <h3>Mochi</h3>
+                <p class="char-role">A small, fluffy black wolf — and, secretly, an emperor</p>
+                <p class="char-hint">Dignified in his own head, ridiculous in practice. The only one who sees Callie cry.</p>
+                <p class="expand-hint"></p>
+              </span>
+            </button>
+            <div class="char-body" id="profile-mochi">
+              <p>Mochi is Tyler, but he behaves like his own character on the page: dignified in his own head, ridiculous in practice. He steals Callie’s pastries, sulks at the name, guards her door at night, and is the only one who sees her cry.</p>
+              <p>Callie befriends him in the imperial gardens, unaware that the adorable creature is a foreign emperor. Tyler is initially horrified by the name. Unfortunately, he enjoys her company far too much to object.</p>
+              <p>His identity is kept hidden from Callie until after their marriage. The reveal is a major turning point: Tyler may expect her to find the secret amusing. Instead, she realises that he witnessed some of her most vulnerable moments while allowing her to believe she was speaking privately to an animal.</p>
+              <blockquote class="quote">I am the Emperor of Eryndor. She named me after a dessert.<cite>Tyler, to his spymaster</cite></blockquote>
+            </div>
+          </article>
+          <article class="char-card" data-court="aurelian" data-terms="lucien de valmont emperor aurelian divorce evelina flawed" id="char-lucien">
+            <button class="char-toggle" type="button" aria-expanded="false" aria-controls="profile-lucien">
+              <span class="mono" aria-hidden="true">L</span>
+              <span>
+                <h3>Lucien de Valmont</h3>
+                <p class="char-role">Emperor of Aurelian</p>
+                <p class="char-hint">Not a villain — a man convinced he can have everything, until the bill arrives.</p>
+                <p class="expand-hint"></p>
+              </span>
+            </button>
+            <div class="char-body" id="profile-lucien">
+              <dl class="facts">
+                <div><dt>Age <span class="proposal">Proposal</span></dt><dd>27</dd></div>
+                <div><dt>Title</dt><dd>Emperor of Aurelian</dd></div>
+                <div><dt>Look <span class="proposal">Proposal</span></dt><dd>Golden-haired and handsome in the classic portrait way, always perfectly dressed</dd></div>
+                <div><dt>Core wound</dt><dd>Grew up in his father’s shadow and always felt Callie was the one the court truly respected</dd></div>
+                <div><dt>Flaw</dt><dd>Wants to be adored rather than respected, and mistakes Callie’s competence for coldness</dd></div>
+              </dl>
+              <p class="arc"><strong>Arc.</strong> An emperor convinced he can have everything becomes a man forced to confront the consequences of his choices. Evelina makes him feel like a hero; Callie makes him feel measured. After the divorce, he slowly realises how much of his reign she was quietly holding up.</p>
+            </div>
+          </article>
+          <article class="char-card" data-court="aurelian" data-terms="evelina rosier mistress empress pregnancy house rosier security" id="char-evelina">
+            <button class="char-toggle" type="button" aria-expanded="false" aria-controls="profile-evelina">
+              <span class="mono" aria-hidden="true">E</span>
+              <span>
+                <h3>Evelina Rosier</h3>
+                <p class="char-role">Lucien’s mistress, later raised toward the Aurelian crown</p>
+                <p class="char-hint">A woman from a disgraced house who wants safety, and discovers the cost of power.</p>
+                <p class="expand-hint"></p>
+              </span>
+            </button>
+            <div class="char-body" id="profile-evelina">
+              <dl class="facts">
+                <div><dt>Age <span class="proposal">Proposal</span></dt><dd>22</dd></div>
+                <div><dt>Background</dt><dd>Daughter of House Rosier, disgraced when her father was convicted of embezzling from the treasury</dd></div>
+                <div><dt>Look <span class="proposal">Proposal</span></dt><dd>Soft auburn curls, wide grey eyes, pale pastel gowns that make her look younger and more fragile than she is</dd></div>
+                <div><dt>Motive</dt><dd>Security above all; she has known poverty and humiliation and will never go back</dd></div>
+                <div><dt>Flaw</dt><dd>Believes power will make her safe, and trusts the wrong mentor</dd></div>
+              </dl>
+              <p class="arc"><strong>Arc.</strong> A vulnerable mistress desperate for security becomes a politically ambitious woman who discovers the cost of power. Understandable even when harmful. She starts out sincere, learns that sweetness gets results, and only after becoming empress discovers that the court which flattered her as a mistress never respected her.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="subhead">
+          <h3>Supporting cast — Aurelian</h3>
+          <span class="proposal" style="margin-left:0">All names and roles are proposals</span>
+        </div>
+        <div class="support-grid">
+          <article class="support-card" data-court="aurelian" data-terms="duke armand chen callie father house chen duty" id="char-armand">
+            <p class="meta">Father</p>
+            <h4>Duke Armand Chen</h4>
+            <p>Callie’s father. Proud, cautious, loves her but taught her duty before happiness. Must choose between House Chen’s standing and his daughter.</p>
+          </article>
+          <article class="support-card" data-court="aurelian" data-terms="lady rosalind hart lady-in-waiting friend ally north" id="char-rosalind">
+            <p class="meta">Ally</p>
+            <h4>Lady Rosalind Hart</h4>
+            <p>Callie’s lady-in-waiting and only real friend at court. Sharp-tongued, loyal, follows her north.</p>
+          </article>
+          <article class="support-card" data-court="aurelian" data-terms="marquess silas darrow chancellor hidden enemy evelina patron" id="char-darrow">
+            <p class="meta">Hidden enemy</p>
+            <h4>Marquess Silas Darrow</h4>
+            <p>Lucien’s charming chancellor, Evelina’s quiet patron. Wants House Chen’s influence broken.</p>
+          </article>
+          <article class="support-card" data-court="aurelian" data-terms="dowager empress isolde de valmont lucien mother wildcard" id="char-isolde">
+            <p class="meta">Wildcard</p>
+            <h4>Dowager Empress Isolde de Valmont</h4>
+            <p>Lucien’s mother. Cold toward Callie, but respects her far more than she ever admits.</p>
+          </article>
+          <article class="support-card" data-court="aurelian" data-terms="sir gareth vale commander guard loyal ally" id="char-gareth">
+            <p class="meta">Ally</p>
+            <h4>Sir Gareth Vale</h4>
+            <p>Commander of the empress’s guard. Stays loyal to Callie when the palace turns.</p>
+          </article>
+        </div>
+        <div class="subhead">
+          <h3>Supporting cast — Eryndor</h3>
+          <span class="proposal" style="margin-left:0">All names and roles are proposals</span>
+        </div>
+        <div class="support-grid">
+          <article class="support-card" data-court="eryndor" data-terms="dowager empress park hye-rin hyerin mother-in-law tests callie" id="char-hyerin">
+            <p class="meta">Mother-in-law</p>
+            <h4>Dowager Empress Park Hye-rin</h4>
+            <p>Tyler’s mother. Elegant, formidable, a former regent. Tests Callie hard and becomes her fiercest supporter once she passes.</p>
+          </article>
+          <article class="support-card" data-court="eryndor" data-terms="kang jiwoo spymaster friend confidant mochi teases" id="char-jiwoo">
+            <p class="meta">Confidant</p>
+            <h4>Kang Jiwoo</h4>
+            <p>Tyler’s spymaster and oldest friend. Knows every secret, including Mochi, and teases Tyler mercilessly about it.</p>
+          </article>
+          <article class="support-card" data-court="eryndor" data-terms="princess park sora sister teenage white wolf cub comic relief moonborn" id="char-sora">
+            <p class="meta">Comic relief</p>
+            <h4>Princess Park Sora</h4>
+            <p>Tyler’s teenage sister. Also Moonborn (a white wolf cub). Adores Callie immediately and nearly gives the secret away.</p>
+          </article>
+          <article class="support-card" data-court="eryndor" data-terms="grand duke park wonseok uncle rival no gift legitimacy" id="char-wonseok">
+            <p class="meta">Rival</p>
+            <h4>Grand Duke Park Wonseok</h4>
+            <p>Tyler’s uncle. Has no Gift and believes the Moonborn secret could topple Tyler and put him on the throne.</p>
+          </article>
+          <article class="support-card" data-court="eryndor" data-terms="duchess elara ravenscroft noble house opponent faction against callie" id="char-elara">
+            <p class="meta">Opponent</p>
+            <h4>Duchess Elara Ravenscroft</h4>
+            <p>Head of Eryndor’s most powerful noble house. Wanted her own daughter as empress and leads the faction against Callie.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="relationships">
+      <div class="wrap">
+        <p class="kicker">Who is tied to whom</p>
+        <h2>Relationships</h2>
+        <p class="section-intro">A simple map of the bonds that drive the plot. Dashed lines are hidden or hostile. Supporting names here are proposals.</p>
+        <p class="rel-hint">On a smaller screen, scroll the map sideways — or use the list beneath it.</p>
+        <div class="rel-wrap" tabindex="0" aria-label="Relationship map, scroll sideways on a small screen">
+          <svg class="rel-svg" viewBox="0 0 1040 580" role="img" aria-labelledby="rel-title rel-desc">
+            <title id="rel-title">Relationship map for The Empress’s Second Crown</title>
+            <desc id="rel-desc">Hye-rin tests Callie. Lucien divorces Callie and favours Evelina. Silas Darrow secretly guides Evelina. Tyler marries Callie and hides that he is Mochi. Kang Jiwoo spies for Tyler. Grand Duke Wonseok plots against Tyler.</desc>
+            <defs>
+              <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 1.2L8.5 5L0 8.8" fill="none" stroke="#e8d39a" stroke-width="1.4"/>
+              </marker>
+              <marker id="arrow-silver" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 1.2L8.5 5L0 8.8" fill="none" stroke="#c5ced8" stroke-width="1.4"/>
+              </marker>
+              <marker id="arrow-rose" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 1.2L8.5 5L0 8.8" fill="none" stroke="#c9a8ad" stroke-width="1.4"/>
+              </marker>
+            </defs>
+            <!-- Hye-rin -> Callie -->
+            <path d="M500 100 L500 242" fill="none" stroke="#e8d39a" stroke-width="1.4" marker-end="url(#arrow-gold)"/>
+            <text x="516" y="178" fill="#e8d39a" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">tests</text>
+            <!-- Lucien -> Callie -->
+            <path d="M328 236 L428 268" fill="none" stroke="#e8d39a" stroke-width="1.4" marker-end="url(#arrow-gold)"/>
+            <text x="334" y="228" fill="#e8d39a" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">divorces</text>
+            <!-- Lucien -> Evelina -->
+            <path d="M253 272 L253 412" fill="none" stroke="#e8d39a" stroke-width="1.4" marker-end="url(#arrow-gold)"/>
+            <text x="266" y="350" fill="#e8d39a" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">favours</text>
+            <!-- Darrow -> Evelina -->
+            <path d="M164 456 L206 456" fill="none" stroke="#c9a8ad" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#arrow-rose)"/>
+            <text x="186" y="408" text-anchor="middle" fill="#c9a8ad" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">secretly guides</text>
+            <!-- Tyler -> Callie -->
+            <path d="M752 282 L596 282" fill="none" stroke="#c5ced8" stroke-width="1.6" marker-end="url(#arrow-silver)"/>
+            <text x="674" y="246" text-anchor="middle" fill="#c5ced8" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">marries, hides Mochi</text>
+            <!-- Jiwoo -> Tyler -->
+            <path d="M902 412 L845 314" fill="none" stroke="#c5ced8" stroke-width="1.4" marker-end="url(#arrow-silver)"/>
+            <text x="910" y="372" fill="#c5ced8" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">spies for</text>
+            <!-- Wonseok -> Tyler -->
+            <path d="M902 100 L845 248" fill="none" stroke="#c9a8ad" stroke-width="1.4" stroke-dasharray="6 5" marker-end="url(#arrow-rose)"/>
+            <text x="910" y="180" fill="#c9a8ad" font-size="13" font-family="Source Sans 3, Segoe UI, sans-serif">plots against</text>
+
+            <g font-family="Cormorant Garamond, Palatino, serif" text-anchor="middle">
+              <a href="#char-hyerin">
+                <rect x="412" y="36" width="176" height="64" rx="32" fill="#1a2238" stroke="#e8d39a" stroke-width="1.3"/>
+                <text x="500" y="64" fill="#f6f1e6" font-size="17">Dowager Hye-rin</text>
+                <text x="500" y="82" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">tests Callie</text>
+              </a>
+              <a href="#char-callie">
+                <rect x="412" y="250" width="176" height="64" rx="32" fill="#1a2238" stroke="#e8d39a" stroke-width="1.8"/>
+                <text x="500" y="279" fill="#e8d39a" font-size="22">Callie</text>
+                <text x="500" y="298" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">the one who chooses</text>
+              </a>
+              <a href="#char-tyler">
+                <rect x="752" y="250" width="186" height="64" rx="32" fill="#1a2238" stroke="#c5ced8" stroke-width="1.8"/>
+                <text x="845" y="279" fill="#e6edf5" font-size="22">Tyler (Mochi)</text>
+                <text x="845" y="298" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">marries, hides the wolf</text>
+              </a>
+              <a href="#char-lucien">
+                <rect x="178" y="208" width="150" height="64" rx="32" fill="#1a2238" stroke="#c9a44a" stroke-width="1.3"/>
+                <text x="253" y="237" fill="#f6f1e6" font-size="18">Lucien</text>
+                <text x="253" y="255" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">Emperor of Aurelian</text>
+              </a>
+              <a href="#char-evelina">
+                <rect x="214" y="420" width="150" height="64" rx="32" fill="#1a2238" stroke="#c9a44a" stroke-width="1.3"/>
+                <text x="289" y="449" fill="#f6f1e6" font-size="18">Evelina</text>
+                <text x="289" y="467" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">raised toward a crown</text>
+              </a>
+              <a href="#char-darrow">
+                <rect x="16" y="420" width="140" height="64" rx="32" fill="#1a2238" stroke="#c9a8ad" stroke-width="1.3"/>
+                <text x="86" y="449" fill="#f6f1e6" font-size="16">Silas Darrow</text>
+                <text x="86" y="467" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">hidden enemy</text>
+              </a>
+              <a href="#char-wonseok">
+                <rect x="800" y="36" width="204" height="64" rx="32" fill="#1a2238" stroke="#c9a8ad" stroke-width="1.3"/>
+                <text x="902" y="64" fill="#f6f1e6" font-size="17">Grand Duke Wonseok</text>
+                <text x="902" y="82" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">plots against Tyler</text>
+              </a>
+              <a href="#char-jiwoo">
+                <rect x="800" y="420" width="204" height="64" rx="32" fill="#1a2238" stroke="#c5ced8" stroke-width="1.3"/>
+                <text x="902" y="449" fill="#f6f1e6" font-size="18">Kang Jiwoo</text>
+                <text x="902" y="467" fill="#c9c0ae" font-size="11" font-family="Source Sans 3, sans-serif">spymaster, confidant</text>
+              </a>
+            </g>
+          </svg>
+        </div>
+        <div class="rel-legend">
+          <span><i class="swatch-line"></i> Open bond or public act</span>
+          <span><i class="swatch-line dash"></i> Hidden guidance or a plot</span>
+          <span>Gold leans Aurelian · silver leans Eryndor</span>
+        </div>
+        <div class="rel-list" aria-label="Relationships as a list">
+          <div class="rel-item" data-terms="lucien divorces callie"><strong>Lucien</strong> divorces <strong>Callie</strong></div>
+          <div class="rel-item" data-terms="lucien favours evelina"><strong>Lucien</strong> favours <strong>Evelina</strong></div>
+          <div class="rel-item" data-terms="silas darrow secretly guides evelina"><strong>Silas Darrow</strong> secretly guides <strong>Evelina</strong> <span class="proposal">Proposal</span></div>
+          <div class="rel-item" data-terms="tyler marries callie hides mochi"><strong>Tyler</strong> marries <strong>Callie</strong> and hides that he is Mochi</div>
+          <div class="rel-item" data-terms="kang jiwoo spies tyler"><strong>Kang Jiwoo</strong> spies for <strong>Tyler</strong> <span class="proposal">Proposal</span></div>
+          <div class="rel-item" data-terms="wonseok plots against tyler"><strong>Grand Duke Wonseok</strong> plots against <strong>Tyler</strong> <span class="proposal">Proposal</span></div>
+          <div class="rel-item" data-terms="hye-rin tests callie"><strong>Dowager Hye-rin</strong> tests <strong>Callie</strong> <span class="proposal">Proposal</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="empires">
+      <div class="wrap">
+        <p class="kicker">Sun and moon</p>
+        <h2>The two empires</h2>
+        <p class="section-intro">Aurelian gold against Eryndor silver. Capitals, and the grain-for-iron treaty that first brings Tyler south, are proposals.</p>
+        <div class="empires">
+          <article class="empire-col aurelian" data-terms="aurelian solenne de valmont golden sun southern ornate trade grain court">
+            <p class="kicker">The golden sun</p>
+            <h3>
+              <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="6" fill="none" stroke="#e8d39a" stroke-width="1.4"/><g stroke="#e8d39a" stroke-width="1.3" stroke-linecap="round"><line x1="14" y1="2" x2="14" y2="5.5"/><line x1="14" y1="22.5" x2="14" y2="26"/><line x1="2" y1="14" x2="5.5" y2="14"/><line x1="22.5" y1="14" x2="26" y2="14"/><line x1="5.5" y1="5.5" x2="8" y2="8"/><line x1="20" y1="20" x2="22.5" y2="22.5"/><line x1="22.5" y1="5.5" x2="20" y2="8"/><line x1="8" y1="20" x2="5.5" y2="22.5"/></g></svg>
+              Aurelian
+            </h3>
+            <dl>
+              <dt>Feel</dt><dd>Southern, golden, ornate, old money</dd>
+              <dt>Capital <span class="proposal">Proposal</span></dt><dd>Solenne, the city of white marble</dd>
+              <dt>Ruling house</dt><dd>De Valmont</dd>
+              <dt>Symbol</dt><dd>The golden sun</dd>
+              <dt>Court culture</dt><dd>Rigid etiquette, rank by bloodline</dd>
+              <dt>Strength</dt><dd>Wealth, trade ports, grain</dd>
+              <dt>Weakness</dt><dd>A complacent court living on old glory</dd>
+            </dl>
+          </article>
+          <article class="empire-col eryndor" data-terms="eryndor hwaryeong park moonborn silver wolf crescent northern snow pine iron navy">
+            <p class="kicker" style="color:var(--silver)">The silver wolf</p>
+            <h3>
+              <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M20 6c-6 1.6-10 7.4-10 13.2S14.4 26.6 20 27.8c-4.8.8-10.4-2-12.8-7.2-2.6-5.4-1.2-12 3.4-15.6C13.8 7.4 17 6.2 20 6z" fill="none" stroke="#c5ced8" stroke-width="1.4"/></svg>
+              Eryndor
+            </h3>
+            <dl>
+              <dt>Feel</dt><dd>Northern, silver, snow and pine, younger and sharper</dd>
+              <dt>Capital <span class="proposal">Proposal</span></dt><dd>Hwaryeong, the moonlit fortress city</dd>
+              <dt>Ruling house</dt><dd>Park, the Moonborn dynasty</dd>
+              <dt>Symbol</dt><dd>The silver wolf beneath a crescent moon</dd>
+              <dt>Court culture</dt><dd>Merit and loyalty matter, but old houses still bite</dd>
+              <dt>Strength</dt><dd>Iron, an army, and a strong navy</dd>
+              <dt>Weakness</dt><dd>Long winters and dependence on southern grain</dd>
+            </dl>
+          </article>
+        </div>
+        <p class="note" style="margin-top:1.4rem">Proposal: the diplomatic talks that bring Tyler south are about a grain-for-iron trade treaty. Callie negotiates it, which is how Tyler first sees what she can really do, and why Lucien later loses leverage when she leaves.</p>
+      </div>
+    </section>
+
+    <section id="moonborn">
+      <div class="wrap narrow">
+        <p class="kicker">A state secret</p>
+        <h2>The Moonborn Gift</h2>
+        <p class="section-intro">The ancient Park bloodline can transform into wolves. The Gift is a state secret, known only to the imperial family, the spymaster, and a handful of sworn servants. The instinctive bond is a proposal.</p>
+        <div class="rules">
+          <article class="rule-card" data-terms="moonborn gift park blood wakes twelve">
+            <div class="rule-num">01</div>
+            <p>Only those of direct Park blood can carry the Gift, and it usually wakes around age twelve.</p>
+          </article>
+          <article class="rule-card" data-terms="wolf form tyler fluffy black father grey">
+            <div class="rule-num">02</div>
+            <p>Each wolf’s form reflects its bearer: Tyler is small, black and fluffy (to his eternal shame), his late father was a huge grey wolf.</p>
+          </article>
+          <article class="rule-card" data-terms="shifting moon full moon day tiring">
+            <div class="rule-num">03</div>
+            <p>Shifting is easiest under the moon and tiring by day; a full moon makes it hard not to shift.</p>
+          </article>
+          <article class="rule-card" data-terms="mind instincts pastry animal wolf form">
+            <div class="rule-num">04</div>
+            <p>In wolf form they keep their own mind but feel animal instincts more strongly, which is why Mochi cannot resist a dropped pastry.</p>
+          </article>
+          <article class="rule-card" data-terms="state secret imperial family spymaster servants">
+            <div class="rule-num">05</div>
+            <p>The Gift is a state secret. Only the imperial family, the spymaster and a handful of sworn servants know.</p>
+          </article>
+          <article class="rule-card" data-terms="bond instinctively callie proposal">
+            <div class="rule-num">06</div>
+            <p>A Moonborn wolf instinctively bonds to one person, and that bond is what draws Mochi back to Callie again and again before Tyler even admits his feelings. <span class="proposal">Proposal</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="plot">
+      <div class="wrap">
+        <p class="kicker">Seventy-five chapters</p>
+        <h2>Plot</h2>
+        <p class="section-intro">Five interconnected parts. The imperial drama is the backbone; the wolf secret supplies humour, tenderness, and the test of trust that closes the story.</p>
+        <div class="timeline">
+          <article class="timeline-item" data-terms="forgotten empress chapters 1 12 evelina mistress isolation court">
+            <div class="part-card">
+              <p class="part-range">Part one · Chapters 1–12</p>
+              <h3>The Forgotten Empress</h3>
+              <p>Calliope Chen, raised to be the perfect empress, has served Aurelian faithfully for eight years. Her marriage to Emperor Lucien de Valmont has become a political arrangement. Lucien brings Evelina Rosier, a beautiful woman from a disgraced house, into the palace as his mistress. Evelina first appears gentle and seeks Callie’s approval, then begins demanding privileges reserved for the empress. Lucien dismisses Callie’s objections as jealousy. The court divides into factions, and Callie is increasingly isolated inside the palace she has spent her life protecting.</p>
+            </div>
+          </article>
+          <article class="timeline-item" data-terms="wolf in the garden chapters 13 25 tyler mochi banquet diplomacy">
+            <div class="part-card">
+              <p class="part-range">Part two · Chapters 13–25</p>
+              <h3>The Wolf in the Garden</h3>
+              <p>Emperor Tyler James Park of Eryndor arrives for diplomatic negotiations — charming, playful, and already a calculating strategist. During a tedious banquet he slips away, transforms into a small fluffy black wolf, and meets Callie in the imperial gardens. She names him Mochi. Horrified by the name and far too fond of her company to object, he begins a double life. As Mochi he witnesses the loneliness she conceals; as Emperor Park he comes to admire her intelligence, kindness, and political ability. Friendship grows through diplomacy, private conversation, and a suspiciously affectionate wolf. Tyler also has political reasons of his own for cultivating the alliance, and his attachment threatens plans years in the making.</p>
+            </div>
+          </article>
+          <article class="timeline-item" data-terms="crown she surrendered chapters 26 38 divorce pregnancy remarriage">
+            <div class="part-card">
+              <p class="part-range">Part three · Chapters 26–38</p>
+              <h3>The Crown She Surrendered</h3>
+              <p>Evelina announces that she is carrying Lucien’s child, and the Aurelian court erupts into a succession crisis. Lucien decides to divorce Callie and elevate Evelina to empress. He expects Callie to accept quietly and remain within his reach. Instead she accepts the divorce and announces her intention to remarry — her chosen husband is Emperor Tyler James Park. The decision shocks the continent: for the first time in generations, a former empress of Aurelian will become the reigning empress of a rival nation.</p>
+            </div>
+          </article>
+          <article class="timeline-item" data-terms="northern crown chapters 39 55 eryndor marriage partnership reveal identity">
+            <div class="part-card">
+              <p class="part-range">Part four · Chapters 39–55</p>
+              <h3>The Northern Crown</h3>
+              <p>Callie’s arrival in Eryndor is only the beginning. She must navigate an unfamiliar imperial court. The marriage begins as a political partnership, but their friendship deepens. Callie also discovers that Mochi has somehow followed her north. Eventually, she learns the truth about the Moonborn dynasty and Tyler’s secret identity. The reveal is meant, in Tyler’s mind, to be almost amusing. For Callie it is something else: he witnessed her most vulnerable moments while letting her believe she was speaking privately to an animal. His deception has genuine consequences.</p>
+            </div>
+          </article>
+          <article class="timeline-item" data-terms="empress who chose chapters 56 75 council conspiracies trust ending">
+            <div class="part-card">
+              <p class="part-range">Part five · Chapters 56–75</p>
+              <h3>The Empress Who Chose</h3>
+              <p>Lucien begins experiencing the political consequences of Callie’s departure. Evelina discovers that becoming empress is considerably more difficult than winning an emperor’s affection. In Eryndor, Callie and Tyler confront conspiracies within the Imperial Council. Tyler’s secret political ambitions create tension in their marriage, while the Moonborn dynasty’s history becomes increasingly relevant to the future of both empires. The story concludes with Callie establishing herself as an independent political force and Tyler learning that a successful marriage requires trust rather than clever manipulation. Earning back her trust becomes an important part of his character development.</p>
+            </div>
+          </article>
+        </div>
+        <h3 style="margin-top:2.4rem">Character development across the story</h3>
+        <div class="dev-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Character</th>
+                <th>Beginning</th>
+                <th>End goal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Callie</td>
+                <td>A dutiful empress who places obligation above herself</td>
+                <td>A confident sovereign who governs as an equal</td>
+              </tr>
+              <tr>
+                <td>Tyler</td>
+                <td>A charming strategist who conceals his true intentions</td>
+                <td>A ruler capable of honesty and genuine partnership</td>
+              </tr>
+              <tr>
+                <td>Lucien</td>
+                <td>An emperor convinced he can have everything</td>
+                <td>A man forced to confront the consequences of his choices</td>
+              </tr>
+              <tr>
+                <td>Evelina</td>
+                <td>A vulnerable mistress desperate for security</td>
+                <td>A politically ambitious woman who discovers the cost of power</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="mysteries">
+      <div class="wrap narrow">
+        <p class="kicker">Keep the plot alive after the divorce</p>
+        <h2>The three mysteries</h2>
+        <p class="section-intro">The questions are part of the premise. The answers below are proposed behind-the-scenes solutions — keep, change, or bin them. They are blurred until you choose to look.</p>
+        <article class="spoiler" data-terms="why tyler knows callie house chen spies intelligence network moonborn princess">
+          <h3>1. Why does Tyler know so much about Callie?</h3>
+          <p>Tyler claims he became interested in her during their first diplomatic meeting. But his intelligence network has been collecting information about House Chen for years. His reasons are political, although his feelings eventually become genuine.</p>
+          <div class="spoiler-body" id="spoiler-1">
+            <p><span class="proposal" style="margin-left:0;margin-right:0.4rem">Proposed answer</span> Years ago, Tyler’s father learned that House Chen descends from a Moonborn princess who married south generations back. Tyler’s intelligence network has watched House Chen ever since, because Callie’s bloodline could strengthen (or threaten) the dying Gift. His interest begins as policy; by the time he meets her it is something else, and he hates that it started as a file.</p>
+          </div>
+          <button class="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-1">Reveal proposed answer</button>
+        </article>
+        <article class="spoiler" data-terms="who is manipulating evelina silas darrow chancellor nobility">
+          <h3>2. Who is manipulating Evelina?</h3>
+          <p>Evelina believes she is securing her future through Lucien’s affection. However, someone within the Aurelian nobility is quietly encouraging her ambitions, providing information, and using her growing influence to undermine Callie’s political allies.</p>
+          <div class="spoiler-body" id="spoiler-2">
+            <p><span class="proposal" style="margin-left:0;margin-right:0.4rem">Proposed answer</span> Marquess Silas Darrow, Lucien’s chancellor. He wants House Chen’s power broken so he can control the emperor. He feeds Evelina information about Callie, coaches her on what to demand, and later plans to use her child as a puppet heir.</p>
+          </div>
+          <button class="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-2">Reveal proposed answer</button>
+        </article>
+        <article class="spoiler" data-terms="what happened moonborn dynasty gift dying ritual wolf army wonseok">
+          <h3>3. What happened to the Moonborn dynasty?</h3>
+          <p>The Moonborn Gift was once widespread among Eryndor’s royal relatives. Now only a handful possess the ability. Tyler’s family has concealed the reason for generations, and certain factions within Eryndor believe the secret could threaten his legitimacy. This mystery eventually connects to the broader political struggle between the two empires.</p>
+          <div class="spoiler-body" id="spoiler-3">
+            <p><span class="proposal" style="margin-left:0;margin-right:0.4rem">Proposed answer</span> Generations ago, a Park emperor tried to force the Gift on children of non-Park nobles to build a wolf army. The ritual failed, killed dozens and broke the bloodline’s power, which has been shrinking ever since. The family buried the truth. Wonseok has found the records and wants to prove the dynasty’s power came from a crime, and that the Gift is dying with Tyler. Callie’s own Moonborn ancestry ends up being key to the answer.</p>
+          </div>
+          <button class="spoiler-btn" type="button" aria-expanded="false" aria-controls="spoiler-3">Reveal proposed answer</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="style">
+      <div class="wrap">
+        <p class="kicker">How it should feel</p>
+        <h2>Style and tone</h2>
+        <p class="section-intro">A richly detailed, character-driven fantasy with the elegance and tension of a royal court drama — warmed by romance and the occasional ridiculous wolf.</p>
+        <div class="style-grid">
+          <article class="style-card" data-terms="atmosphere ceremonies conversations negotiations humour wolf">
+            <h3>Atmosphere</h3>
+            <p>Alternate between lavish imperial ceremonies, quiet conversations, political negotiations, private emotional conflicts, and occasional moments of humour involving Tyler’s wolf form. The humour never undercuts the weight of what Callie loses or what Tyler hides.</p>
+          </article>
+          <article class="style-card" data-terms="tyler playful charming intelligent joking">
+            <h3>Tyler</h3>
+            <p>Remain playful and charming without becoming foolish. His intelligence should be apparent even when he is joking.</p>
+          </article>
+          <article class="style-card" data-terms="callie gentle compassionate principles strength">
+            <h3>Callie</h3>
+            <p>Gentle and compassionate without becoming passive. Her strength lies in her ability to understand people, navigate difficult situations, and maintain her principles.</p>
+          </article>
+          <article class="style-card" data-terms="lucien flawed not evil evelina complexity">
+            <h3>Lucien and Evelina</h3>
+            <p>Lucien should be flawed rather than cartoonishly evil, while Evelina should possess enough complexity to make her decisions understandable even when they are harmful.</p>
+          </article>
+          <article class="style-card" data-terms="mochi warmth not entire focus">
+            <h3>Mochi</h3>
+            <p>Should provide warmth without becoming the entire focus of the story.</p>
+          </article>
+        </div>
+        <div class="detail-box" data-terms="mochi reveal after marriage trust deception turning point">
+          <p class="kicker">A small but important detail</p>
+          <h3>Keep the Mochi secret until after the marriage</h3>
+          <p>Tyler’s identity as Mochi stays hidden from Callie until after they marry. This allows the reveal to become a major turning point in their relationship.</p>
+          <p>Tyler may expect Callie to find the secret amusing. Instead, she realises that he witnessed some of her most vulnerable moments while allowing her to believe she was speaking privately to an animal.</p>
+          <p style="margin-bottom:0">His deception will have genuine consequences, and earning back her trust becomes an important part of his character development.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="questions">
+      <div class="wrap narrow">
+        <p class="kicker">Still to decide</p>
+        <h2>Open questions</h2>
+        <p class="section-intro">These are the choices still sitting on the table, including the largest proposal in the story bible: that Callie quietly has Moonborn ancestry, which is why Tyler’s spies have watched House Chen for years.</p>
+        <div class="q-list">
+          <article class="q-item" data-terms="callie moonborn blood political strength ancestry">
+            <div class="q-num">01</div>
+            <p>Should Callie have any Moonborn blood herself, or keep her strength purely political?</p>
+          </article>
+          <article class="q-item" data-terms="children heir lucien callie court">
+            <div class="q-num">02</div>
+            <p>Do Callie and Lucien have children together, or was the lack of an heir part of why the court turned on her?</p>
+          </article>
+          <article class="q-item" data-terms="evelina pregnancy real">
+            <div class="q-num">03</div>
+            <p>Is Evelina’s pregnancy real?</p>
+          </article>
+          <article class="q-item" data-terms="callie age start twenty-six">
+            <div class="q-num">04</div>
+            <p>How old should Callie be at the start? (The bible proposes 26, after eight years of marriage that began at 18.)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="ornament" aria-hidden="true">
+      <span class="rule"></span>
+      <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="8" cy="11" r="4.2" fill="none" stroke="#e8d39a" stroke-width="1.1"/><path d="M16.5 5.2c-3.6 1-6 4.6-6 8.4 0 3.7 2.3 7.2 6 8.2-3 .6-6.5-1.3-8-4.6-1.6-3.3-.7-7.2 2.1-9.4 1.9-1.5 3.9-2.2 5.9-2.6z" fill="none" stroke="#c5ced8" stroke-width="1.1"/></svg>
+      <span class="rule"></span>
+    </div>
+    <p>The Empress’s Second Crown — a private story guide</p>
+    <p>Items marked Proposal are suggested, not settled.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const nav = document.getElementById("nav");
+      const menuBtn = document.getElementById("menu-btn");
+      const links = document.getElementById("nav-links");
+      const search = document.getElementById("search");
+      const results = document.getElementById("search-results");
+      const banner = document.getElementById("filter-banner");
+      const filterLabel = document.getElementById("filter-label");
+      const clearBtn = document.getElementById("clear-search");
+
+      menuBtn.addEventListener("click", function () {
+        const open = nav.classList.toggle("is-open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      });
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          nav.classList.remove("is-open");
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuBtn.setAttribute("aria-label", "Open menu");
+        });
+      });
+
+      document.querySelectorAll(".char-toggle").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const card = btn.closest(".char-card");
+          const open = !card.classList.contains("is-open");
+          card.classList.toggle("is-open", open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+      });
+
+      document.querySelectorAll(".spoiler-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const box = btn.closest(".spoiler");
+          const open = !box.classList.contains("is-open");
+          box.classList.toggle("is-open", open);
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.textContent = open ? "Hide proposed answer" : "Reveal proposed answer";
+        });
+      });
+
+      const catalogue = [
+        { name: "Calliope Chen", kicker: "Character", href: "#char-callie", terms: "callie empress house chen aurelian" },
+        { name: "Tyler James Park", kicker: "Character", href: "#char-tyler", terms: "emperor eryndor moonborn mochi wolf" },
+        { name: "Mochi", kicker: "Character", href: "#char-mochi", terms: "wolf fluffy black dessert reveal" },
+        { name: "Lucien de Valmont", kicker: "Character", href: "#char-lucien", terms: "emperor aurelian divorce" },
+        { name: "Evelina Rosier", kicker: "Character", href: "#char-evelina", terms: "mistress pregnancy house rosier" },
+        { name: "Duke Armand Chen", kicker: "Aurelian · proposal", href: "#char-armand", terms: "father house chen" },
+        { name: "Lady Rosalind Hart", kicker: "Aurelian · proposal", href: "#char-rosalind", terms: "lady-in-waiting friend ally" },
+        { name: "Marquess Silas Darrow", kicker: "Aurelian · proposal", href: "#char-darrow", terms: "chancellor hidden enemy manipulator" },
+        { name: "Dowager Empress Isolde de Valmont", kicker: "Aurelian · proposal", href: "#char-isolde", terms: "lucien mother wildcard" },
+        { name: "Sir Gareth Vale", kicker: "Aurelian · proposal", href: "#char-gareth", terms: "guard commander ally" },
+        { name: "Dowager Empress Park Hye-rin", kicker: "Eryndor · proposal", href: "#char-hyerin", terms: "mother-in-law tests" },
+        { name: "Kang Jiwoo", kicker: "Eryndor · proposal", href: "#char-jiwoo", terms: "spymaster friend confidant" },
+        { name: "Princess Park Sora", kicker: "Eryndor · proposal", href: "#char-sora", terms: "sister white wolf cub moonborn" },
+        { name: "Grand Duke Park Wonseok", kicker: "Eryndor · proposal", href: "#char-wonseok", terms: "uncle rival gift legitimacy" },
+        { name: "Duchess Elara Ravenscroft", kicker: "Eryndor · proposal", href: "#char-elara", terms: "opponent noble house" },
+        { name: "House Chen", kicker: "House", href: "#char-callie", terms: "aurelian oldest respected" },
+        { name: "House Rosier", kicker: "House", href: "#char-evelina", terms: "disgraced embezzling" },
+        { name: "De Valmont", kicker: "Ruling house", href: "#empires", terms: "aurelian lucien isolde" },
+        { name: "Park, the Moonborn dynasty", kicker: "Ruling house", href: "#empires", terms: "eryndor gift wolf" },
+        { name: "Aurelian", kicker: "Empire", href: "#empires", terms: "golden sun solenne southern grain" },
+        { name: "Eryndor", kicker: "Empire", href: "#empires", terms: "silver moon hwaryeong northern iron" },
+        { name: "Solenne", kicker: "Capital · proposal", href: "#empires", terms: "white marble aurelian" },
+        { name: "Hwaryeong", kicker: "Capital · proposal", href: "#empires", terms: "moonlit fortress eryndor" },
+        { name: "The Moonborn Gift", kicker: "Magic", href: "#moonborn", terms: "wolf shift park blood secret" },
+        { name: "Grain-for-iron treaty", kicker: "Politics · proposal", href: "#empires", terms: "diplomacy trade callie negotiates" },
+        { name: "The Forgotten Empress", kicker: "Part one", href: "#plot", terms: "chapters 1-12" },
+        { name: "The Wolf in the Garden", kicker: "Part two", href: "#plot", terms: "chapters 13-25 mochi" },
+        { name: "The Crown She Surrendered", kicker: "Part three", href: "#plot", terms: "chapters 26-38 divorce" },
+        { name: "The Northern Crown", kicker: "Part four", href: "#plot", terms: "chapters 39-55 reveal" },
+        { name: "The Empress Who Chose", kicker: "Part five", href: "#plot", terms: "chapters 56-75 trust" },
+        { name: "Why does Tyler know so much about Callie?", kicker: "Mystery", href: "#mysteries", terms: "spies house chen ancestry" },
+        { name: "Who is manipulating Evelina?", kicker: "Mystery", href: "#mysteries", terms: "silas darrow" },
+        { name: "What happened to the Moonborn dynasty?", kicker: "Mystery", href: "#mysteries", terms: "ritual wolf army gift dying" },
+        { name: "The Mochi reveal", kicker: "Style note", href: "#style", terms: "trust deception after marriage" },
+        { name: "Open questions", kicker: "Decisions", href: "#questions", terms: "age pregnancy heir moonborn blood" }
+      ];
+
+      const filterables = document.querySelectorAll("[data-terms]");
+      function normalise(s) { return s.toLowerCase().replace(/[’']/g, "'"); }
+      function matches(item, q) {
+        const hay = normalise((item.name || "") + " " + (item.kicker || "") + " " + (item.terms || "") + " " + (item.getAttribute ? item.getAttribute("data-terms") : ""));
+        return hay.indexOf(q) !== -1;
+      }
+      function escapeText(s) {
+        return s.replace(/[&<>"']/g, function (c) {
+          return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+        });
+      }
+      function renderResults(q) {
+        results.innerHTML = "";
+        if (!q) { results.classList.remove("is-open"); return; }
+        const hits = catalogue.filter(function (item) { return matches(item, q); }).slice(0, 10);
+        if (!hits.length) {
+          results.innerHTML = "<p class='muted'>No matches for “" + escapeText(q) + "”.</p>";
+          results.classList.add("is-open");
+          return;
+        }
+        hits.forEach(function (item) {
+          const a = document.createElement("a");
+          a.href = item.href;
+          a.setAttribute("role", "option");
+          a.innerHTML = "<span class='hit-kicker'>" + escapeText(item.kicker) + "</span>" + escapeText(item.name);
+          a.addEventListener("click", function () {
+            results.classList.remove("is-open");
+            const target = document.querySelector(item.href);
+            if (target && target.classList.contains("char-card")) {
+              target.classList.add("is-open");
+              const btn = target.querySelector(".char-toggle");
+              if (btn) btn.setAttribute("aria-expanded", "true");
+            }
+          });
+          results.appendChild(a);
+        });
+        results.classList.add("is-open");
+      }
+      function applyFilter(q) {
+        if (!q) {
+          filterables.forEach(function (el) { el.classList.remove("is-hidden"); });
+          banner.classList.remove("is-visible");
+          banner.hidden = true;
+          return;
+        }
+        let shown = 0;
+        filterables.forEach(function (el) {
+          const hit = matches(el, q) || normalise(el.textContent).indexOf(q) !== -1;
+          el.classList.toggle("is-hidden", !hit);
+          if (hit) shown += 1;
+        });
+        filterLabel.textContent = shown ? ("Showing " + shown + " matches for “" + q + "”.") : ("No section cards match “" + q + "”.");
+        banner.classList.add("is-visible");
+        banner.hidden = false;
+      }
+      function onSearch() {
+        const q = normalise(search.value.trim());
+        renderResults(q);
+        applyFilter(q);
+      }
+      search.addEventListener("input", onSearch);
+      search.addEventListener("focus", function () {
+        if (search.value.trim()) renderResults(normalise(search.value.trim()));
+      });
+      clearBtn.addEventListener("click", function () {
+        search.value = "";
+        onSearch();
+        search.focus();
+      });
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".search-wrap")) results.classList.remove("is-open");
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "/" && document.activeElement !== search && document.activeElement.tagName !== "INPUT" && document.activeElement.tagName !== "TEXTAREA") {
+          e.preventDefault();
+          search.focus();
+        }
+        if (e.key === "Escape") {
+          results.classList.remove("is-open");
+          nav.classList.remove("is-open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+      const sectionIds = ["home", "characters", "relationships", "empires", "moonborn", "plot", "mysteries", "style", "questions"];
+      const navAnchors = Array.prototype.slice.call(links.querySelectorAll("a"));
+      function setActive() {
+        let current = "home";
+        const y = window.scrollY + 90;
+        sectionIds.forEach(function (id) {
+          const el = document.getElementById(id);
+          if (el && el.offsetTop <= y) current = id;
+        });
+        navAnchors.forEach(function (a) {
+          a.classList.toggle("is-active", a.getAttribute("href") === "#" + current);
+        });
+      }
+      window.addEventListener("scroll", setActive, { passive: true });
+      setActive();
+    })();
+  </script>
+</body>
+</html>
